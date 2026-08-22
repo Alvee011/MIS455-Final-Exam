@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meal DB Search</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h2>meal db api example</h2>
-    Enter Meal / Food: <br>
-    <input id="userInput" type="text"> <br>
-    <button onclick="connect()">Coonect to MealDB</button> <br>
 
-    <div id="displayArea">
+    <header>
+        <h2>Meal Search Webpage</h2>
+        <hr>
+    </header>
 
-
+    <div class="searchArea">
+        Enter Meal / Food: <br>
+        <input id="userInput" type="text"> <br>
+        <button onclick="connect()">Search Meal</button>
     </div>
+
+    <div id="displayArea"></div>
+
+    <div id="showAllArea"></div>
+
+    <footer>
+        <hr>
+        <p>Faruque Azam Alvee - 2331106 - MIS455</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

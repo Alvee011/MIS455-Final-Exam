@@ -49,3 +49,23 @@ function display(data) {
         showAllContent.appendChild(btn);
     }
 }
+
+function showAll() {
+    var oldContent = document.getElementById("displayArea");
+    var showAllContent = document.getElementById("showAllArea");
+
+    for (var i = 5; i < allArrayData.length; i++) {
+        var newDiv = document.createElement("div");
+        newDiv.innerHTML = `Meal ID: <b>${allArrayData[i].idMeal}</b> <br>
+                            Meal Name: <b>${allArrayData[i].strMeal}</b> <br>
+                            <img src="${allArrayData[i].strMealThumb}"> <br>
+                            Meal Title: ${allArrayData[i].strCategory} <br>
+                            Cooking Instructions: <p>${allArrayData[i].strInstructions}</p>`;
+
+        newDiv.classList.add("innerStyle");
+        oldContent.appendChild(newDiv);
+    }
+
+    // remove the button after clicking
+    showAllContent.textContent = "";
+}
